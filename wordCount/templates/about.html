@@ -1,5 +1,29 @@
+{%extends "base.html" %}
+{% block content %} 
+
 <h1>About</h1>
 
-<p>글자만 세줍니다.</p>
 
-<a href="{%url 'home'%}">home으로 돌아가기</a>
+Section
+<form action="/my-handling-form-page" method="post">
+  <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="user_name">
+    </div>
+
+    <div>
+        <label for="mail">E-mail:</label>
+        <input type="email" id="mail" name="user_email">
+    </div>
+
+  <div>
+    <label for="msg">Message:</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </div>
+ 
+  <div class="button">
+    <button type="submit">Send your message</button>
+  </div>
+</form>
+
+{% endblock content %} 

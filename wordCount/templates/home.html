@@ -1,11 +1,13 @@
-<h1>글자를 세보자.</h1>
+{%extends "base.html" %}
+{% block content %} 
 
-<a href= "{%url 'about'%}">ABOUT</a>
+<div class="container boody">
+        <form action="{%url 'result'%}">
 
-<form action ="{%url 'result'%}">
-    <textarea cols="40" rows="10" name ="fulltext">
-
-    </textarea>
-    <br>
-    <input type="submit" value="count!">
-</form>
+          <label for="subject">한글만 골라줍니다.</label>
+          <textarea id="subject" name="fulltext" placeholder="Write something.." style="height:200px" ></textarea>
+      
+          <input type="submit" value="Submit">
+        </form>
+</div>
+{% endblock content %}
